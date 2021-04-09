@@ -11,7 +11,20 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 const routes = [
-
+  {
+    path: '',
+    redirect: '/m_index'
+  },
+  {
+    path: "/pc_index", // pc端首页
+    name: 'PcIndex',
+    component: () => import('../views/Home.vue')
+  },
+  {
+    path: '/m_index', // 手机端首页
+    name: 'Mhome',
+    component: () => import('../views/mviews/Home.vue')
+  },
   {
     path: '/',
     name: 'Home',
